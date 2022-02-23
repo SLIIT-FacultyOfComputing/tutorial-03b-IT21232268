@@ -17,27 +17,39 @@ int main() {
     int totalVolume;
     
     // 4. Input the height, width, lenght of box1 and box2
+    struct Box {
+      int Height, Width, Length;
+    } Box1, Box2;
+  
     cout << "Enter Box 1 Height : ";
-    cin >> Height of Box 1;
+    cin >> Box1.Height;
     cout << "Enter Box 1 Width : ";
-    cin >> Width of Box 1;
+    cin >> Box1.Width;
     cout << "Enter Box 1 Length : ";
-    cin >> Length of Box 1;
-    
+    cin >> Box1.Length;
+
+    cout << endl;
+  
     cout << "Enter Box 2 Height : ";
-    cin >> Height of Box 2;
+    cin >> Box2.Height;
     cout << "Enter Box 2 Width : ";
-    cin >> Width of Box 2;
+    cin >> Box2.Width;
     cout << "Enter Box 2 Length : ";
-    cin >> Length of Box 2;
+    cin >> Box2.Length;
     
     // 5. Replace the coding below to pass the Box type structure
-    totalVolume = volume( , , )
-             + volume( , , );
-    
+    totalVolume = volume( Box1.Height, Box1.Width, Box1.Length)
+             + volume(Box2.Height, Box2.Width, Box2.Length);
+
+    cout << endl;
     cout << "Volume of Box is " << totalVolume << endl;
     
     return 0;
 }
 
 // Implement the functions here
+
+int volume(int height, int width, int length)
+{
+  return height * width * length;
+}
